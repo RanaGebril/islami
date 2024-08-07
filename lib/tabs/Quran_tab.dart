@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/Sura_details_screen.dart';
+import 'package:islami/Sura_model.dart';
 
 import '../APP_colors.dart';
 
@@ -68,23 +70,29 @@ class QuranTab extends StatelessWidget {
               Expanded(
                   child: ListView.builder(
                     itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.symmetric(
-                            vertical: 8, horizontal: 50),
-                        child: Row(
-                          children: [
-                            Text(versesNumber[index].toString(),
-                              style: GoogleFonts.inter(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w400
-                              ),),
-                            Spacer(),
-                            Text(suraNames[index],
-                              style: GoogleFonts.inter(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.w400
-                              ),)
-                          ],
+                      return InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, SuraDetailsScreen.routeName,
+                              arguments: SuraModel(suraNames[index], index));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 8, horizontal: 50),
+                          child: Row(
+                            children: [
+                              Text(versesNumber[index].toString(),
+                                style: GoogleFonts.inter(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w400
+                                ),),
+                              Spacer(),
+                              Text(suraNames[index],
+                                style: GoogleFonts.inter(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w400
+                                ),)
+                            ],
+                          ),
                         ),
                       );
 
