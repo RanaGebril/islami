@@ -1,6 +1,7 @@
-class SuraModel{
-String suraName;
-int index;
 
-SuraModel(this.suraName , this.index);
+class SuraModel{
+  String name;
+  int index;
+
+  SuraModel({required this.name,required this.index});
 }
