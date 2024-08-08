@@ -1,12 +1,84 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/APP_colors.dart';
+import 'package:islami/hadeth_model.dart';
 
 class HadethDetailsScreen extends StatelessWidget {
   static const String routeName="hadethDetails";
-   HadethDetailsScreen({super.key});
+  const HadethDetailsScreen({super.key});
 
   @override
-  var
   Widget build(BuildContext context) {
-    return const Placeholder();
+    var hadeth_model = ModalRoute.of(context)?.settings.arguments as HadethModel;
+    return Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage("assets/images/bg3.png"))),
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          iconTheme: IconThemeData(
+            size: 40,
+          ),
+          centerTitle: true,
+          title: Text(
+            "إسلامي",
+            style: GoogleFonts.elMessiri(
+                color: Color(0xff242424),
+                fontSize: 30,
+                fontWeight: FontWeight.w700),
+          ),
+        ),
+        body: Card(
+          color: AppColors.secondary,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(25),
+          ),
+          elevation: 25,
+          shadowColor: AppColors.primary,
+          margin: EdgeInsets.all(25),
+          child: Padding(
+            padding: const EdgeInsets.all(25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  child:
+                  Text(
+                    hadeth_model.title,
+                    style: GoogleFonts.elMessiri(
+                        color: Color(0xff242424),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w400),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                Divider(
+                  thickness: 1,
+                  color: AppColors.primary,
+                  endIndent: 20,
+                  indent: 20,
+                ),
+                Expanded(
+                    child: ListView.builder(itemBuilder: (context, index) {
+                      return Text(hadeth_model.content[index],
+                        style: GoogleFonts.elMessiri(
+                            color: Color(0xff242424),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            height: 2),
+                        textAlign: TextAlign.center,
+                      );
+                    },
+                    itemCount: hadeth_model.content.length,)
+                )
+
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

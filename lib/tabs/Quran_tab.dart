@@ -306,13 +306,13 @@ class _QuranTabState extends State<QuranTab> {
                         children: [
                           Text(
                             versesNumber[index].toString(),
-                            style: GoogleFonts.inter(
+                            style: GoogleFonts.elMessiri(
                                 fontSize: 25, fontWeight: FontWeight.w400),
                           ),
                           Spacer(),
                           Text(
                             suraNames[index],
-                            style: GoogleFonts.inter(
+                            style: GoogleFonts.elMessiri(
                                 fontSize: 25, fontWeight: FontWeight.w400),
                           ),
                         ],

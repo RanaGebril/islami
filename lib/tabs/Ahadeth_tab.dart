@@ -57,6 +57,9 @@ class _AhadethTabState extends State<AhadethTab> {
                     onTap: () {
                       Navigator.pushNamed(context, HadethDetailsScreen.routeName,
                       arguments: HadethModel(allAhadeth[index].title, allAhadeth[index].content));
+                      setState(() {
+
+                      });
                     },
                     child: Text(allAhadeth[index].title,
                       style: GoogleFonts.elMessiri(
