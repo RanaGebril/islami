@@ -32,7 +32,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
           ),
         ),
         body: Card(
-          color: AppColors.secondary,
+          color: Color(0xffF8F8F8),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
@@ -50,10 +50,7 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                       Row(mainAxisAlignment: MainAxisAlignment.end, children: [
                     Text(
                       model.name,
-                      style: GoogleFonts.elMessiri(
-                          color: Color(0xff242424),
-                          fontSize: 30,
-                          fontWeight: FontWeight.w700),
+                      style: Theme.of(context).textTheme.bodyLarge
                     ),
                     SizedBox(
                       width: 40,
@@ -74,11 +71,10 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                         itemBuilder: (context, index) {
                           return Text(
                             "${verses[index]} ",
-                            style: GoogleFonts.elMessiri(
-                                color: Color(0xff242424),
-                                fontSize: 20,
-                                fontWeight: FontWeight.w400,
-                                height: 3),
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                              fontSize: 20,
+                              height: 3
+                            ),
                             textAlign: TextAlign.center,
                           );
                         },
@@ -100,7 +96,12 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                                     shape: BoxShape.circle,
                                     border: Border.all(
                                         color: AppColors.primary, width: 2)),
-                                child: Center(child: Text("${index + 1}")),
+                                child: Center(child: Text("${index + 1}",
+                                style: GoogleFonts.elMessiri(
+                                  color: AppColors.blackColor,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600
+                                ),)),
                               ),
                               Expanded(
                                 child: Divider(

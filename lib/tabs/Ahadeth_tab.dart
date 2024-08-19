@@ -33,44 +33,41 @@ class _AhadethTabState extends State<AhadethTab> {
         ),
         Divider(
           height: 0.95,
-          thickness: 3,
-          color: AppColors.primary,
         ),
         Padding(
           padding:
           const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
           child: Text(
             "Ahadeth",
-            style: GoogleFonts.elMessiri(
-                fontSize: 25, fontWeight: FontWeight.w600),
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
         Divider(
           height: 0.95,
-          thickness: 3,
-          color: AppColors.primary,
         ),
         Expanded(
-            child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, HadethDetailsScreen.routeName,
+            child: ListView.separated(itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, HadethDetailsScreen.routeName,
                       arguments: HadethModel(allAhadeth[index].title, allAhadeth[index].content));
-                      setState(() {
+                  setState(() {
 
-                      });
-                    },
-                    child: Text(allAhadeth[index].title,
-                      style: GoogleFonts.elMessiri(
-                          fontSize: 25,
-                          fontWeight: FontWeight.w400,
-                        height: 2
-                      ),
-                    textAlign: TextAlign.center,),
-                  );
+                  });
                 },
-            itemCount: allAhadeth.length,))
+                child: Text(allAhadeth[index].title,
+                  style: Theme.of(context).textTheme.bodySmall,
+                  textAlign: TextAlign.center,),
+              );
+            }, separatorBuilder: (context, index) {
+              return Divider(
+                thickness: 1,
+                endIndent: 70,
+                indent: 70,
+                height: 20,
+              );
+            }, itemCount: allAhadeth.length)
+        )
       ],
 
     );

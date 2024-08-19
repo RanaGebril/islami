@@ -20,7 +20,7 @@ class HadethDetailsScreen extends StatelessWidget {
           ),
         ),
         body: Card(
-          color: AppColors.secondary,
+          color: Color(0xfff8f8f8),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
@@ -37,10 +37,7 @@ class HadethDetailsScreen extends StatelessWidget {
                   child:
                   Text(
                     hadeth_model.title,
-                    style: GoogleFonts.elMessiri(
-                        color: Color(0xff242424),
-                        fontSize: 25,
-                        fontWeight: FontWeight.w400),
+                    style: Theme.of(context).textTheme.bodyLarge,
                     textAlign: TextAlign.center,
                   ),
                 ),

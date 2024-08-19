@@ -39,11 +39,10 @@ class _SebhaTabState extends State<SebhaTab> {
           ],
         ),
         Text("عدد التسبيحات",
-          style: GoogleFonts.elMessiri(
-          fontSize: 30,
-          fontWeight: FontWeight.w600,
+          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+         fontWeight: FontWeight.w600,
         ),
-        textAlign: TextAlign.center,
+          textAlign: TextAlign.center,
         ),
         Center(
           child: Container(
@@ -57,10 +56,7 @@ class _SebhaTabState extends State<SebhaTab> {
               borderRadius: BorderRadius.circular(25),
             ),
             child: Text(counter.toString(),
-              style: GoogleFonts.inter(
-              fontSize: 30,
-              fontWeight: FontWeight.w400,
-              )
+            style: Theme.of(context).textTheme.bodyMedium,
             ),
           ),
         ),
@@ -68,19 +64,14 @@ class _SebhaTabState extends State<SebhaTab> {
           child: Container(
             alignment: Alignment.center,
             margin: EdgeInsets.all(15),
-            padding: EdgeInsets.all(5),
-            width: 200,
+            width: 150,
             height: 80,
             decoration: BoxDecoration(
               color: AppColors.primary,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Text(tasbeh[index],
-                style: GoogleFonts.elMessiri(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w400,
-                  color: AppColors.secondary
-                )
+        style: Theme.of(context).textTheme.bodyMedium
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/APP_colors.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -17,20 +18,21 @@ class RadioTab extends StatelessWidget {
             height: 40,
           ),
           Text("إذاعة القرآن الكريم",
-          style: GoogleFonts.elMessiri(
-            fontWeight: FontWeight.w600,
-            fontSize: 25
-          ),),
-          SizedBox(
-            height: 40,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              ImageIcon(AssetImage("assets/images/previous.png")),
-              ImageIcon(AssetImage("assets/images/play.png")),
-              ImageIcon(AssetImage("assets/images/next.png"))
-            ],
+         SizedBox(
+           height: 70,
+         ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ImageIcon(AssetImage("assets/images/previous.png"),color: AppColors.primary),
+                ImageIcon(AssetImage("assets/images/play.png"),color: AppColors.primary,size: 36),
+                ImageIcon(AssetImage("assets/images/next.png"),color: AppColors.primary)
+              ],
+            ),
           )
           
         ],

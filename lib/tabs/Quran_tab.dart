@@ -271,14 +271,12 @@ class _QuranTabState extends State<QuranTab> {
                   children: [
                     Text(
                       "Verses Number",
-                      style: GoogleFonts.elMessiri(
-                          fontSize: 25, fontWeight: FontWeight.w600),
+                        style: Theme.of(context).textTheme.bodyMedium
                     ),
                     Spacer(),
                     Text(
                       "Sura Name",
-                      style: GoogleFonts.elMessiri(
-                          fontSize: 25, fontWeight: FontWeight.w600),
+                        style: Theme.of(context).textTheme.bodyMedium
                     )
                   ],
                 ),
@@ -302,14 +300,12 @@ class _QuranTabState extends State<QuranTab> {
                         children: [
                           Text(
                             versesNumber[index].toString(),
-                            style: GoogleFonts.elMessiri(
-                                fontSize: 25, fontWeight: FontWeight.w400),
+                              style: Theme.of(context).textTheme.bodySmall
                           ),
                           Spacer(),
                           Text(
                             suraNames[index],
-                            style: GoogleFonts.elMessiri(
-                                fontSize: 25, fontWeight: FontWeight.w400),
+                              style: Theme.of(context).textTheme.bodySmall
                           ),
                         ],
                       ),

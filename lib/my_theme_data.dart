@@ -13,7 +13,7 @@ class MyThemeData{
         shadowColor: Colors.transparent,
         iconTheme: IconThemeData(
           size: 40,
-          color: Colors.black
+          color: AppColors.blackColor
         ),
         titleTextStyle:  GoogleFonts.elMessiri(
             color: Color(0xff242424),
@@ -32,6 +32,20 @@ class MyThemeData{
       thickness: 3,
        color: AppColors.primary,
     ),
+    textTheme: TextTheme(
+      bodyLarge: GoogleFonts.elMessiri(
+          color: AppColors.blackColor,
+          fontSize: 30,
+          fontWeight: FontWeight.w700),
+      bodyMedium: GoogleFonts.elMessiri(
+          color: AppColors.blackColor,
+          fontSize: 25,
+          fontWeight: FontWeight.w600),
+      bodySmall: GoogleFonts.elMessiri(
+          color: AppColors.blackColor,
+          fontSize: 25,
+          fontWeight: FontWeight.w400),
+    )
 
 
 
