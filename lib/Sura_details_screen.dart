@@ -18,26 +18,17 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
   @override
   Widget build(BuildContext context) {
     var model = ModalRoute.of(context)?.settings.arguments as SuraModel;
-    if (verses.isEmpty) {           //to inforce calling set state and rebuild in finite loop
+    if (verses.isEmpty) {
+      //to inforce calling set state and rebuild in finite loop
       loadSurafile(model.index);
     }
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage("assets/images/bg3.png"))),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          iconTheme: IconThemeData(
-            size: 40,
-          ),
-          centerTitle: true,
           title: Text(
             "إسلامي",
-            style: GoogleFonts.elMessiri(
-                color: Color(0xff242424),
-                fontSize: 30,
-                fontWeight: FontWeight.w700),
           ),
         ),
         body: Card(
@@ -74,10 +65,9 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                   ]),
                 ),
                 Divider(
-                  thickness: 1,
-                  color: AppColors.primary,
                   endIndent: 20,
                   indent: 20,
+                  thickness: 1,
                 ),
                 Expanded(
                     child: ListView.separated(
@@ -98,7 +88,6 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                               Expanded(
                                 child: Divider(
                                   thickness: 1,
-                                  color: AppColors.primary,
                                   endIndent: 10,
                                   indent: 20,
                                 ),
@@ -116,7 +105,6 @@ class _SuraDetailsScreenState extends State<SuraDetailsScreen> {
                               Expanded(
                                 child: Divider(
                                   thickness: 1,
-                                  color: AppColors.primary,
                                   indent: 10,
                                   endIndent: 20,
                                 ),

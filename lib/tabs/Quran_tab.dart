@@ -262,9 +262,7 @@ class _QuranTabState extends State<QuranTab> {
                 height: 10,
               ),
               Divider(
-                height: 0.95,
-                thickness: 3,
-                color: AppColors.primary,
+
               ),
               Padding(
                 padding:
@@ -286,9 +284,7 @@ class _QuranTabState extends State<QuranTab> {
                 ),
               ),
               Divider(
-                height: 0.95,
-                thickness: 3,
-                color: AppColors.primary,
+               
               ),
               Expanded(
                   child: ListView.builder(
@@ -328,11 +324,10 @@ class _QuranTabState extends State<QuranTab> {
         Positioned(
           left: 205,
           bottom: 0,
-          height: 477,
+          height: 469,
           child: Container(
             color: AppColors.primary,
             width: 3,
-            height: 400,
           ),
         )
       ],

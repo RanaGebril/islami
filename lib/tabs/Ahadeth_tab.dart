@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/hadeth_model.dart';
-import 'package:islami/tabs/hadeth_details_screen.dart';
+import 'package:islami/hadeth_details_screen.dart';
 
 class AhadethTab extends StatefulWidget {
   AhadethTab({super.key});
