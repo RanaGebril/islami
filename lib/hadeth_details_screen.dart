@@ -14,19 +14,9 @@ class HadethDetailsScreen extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(image: AssetImage("assets/images/bg3.png"))),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          iconTheme: IconThemeData(
-            size: 40,
-          ),
-          centerTitle: true,
           title: Text(
             "إسلامي",
-            style: GoogleFonts.elMessiri(
-                color: Color(0xff242424),
-                fontSize: 30,
-                fontWeight: FontWeight.w700),
           ),
         ),
         body: Card(
