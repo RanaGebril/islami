@@ -16,7 +16,7 @@ class MyThemeData{
           color: AppColors.blackColor
         ),
         titleTextStyle:  GoogleFonts.elMessiri(
-            color: Color(0xff242424),
+            color: AppColors.blackColor,
             fontSize: 30,
             fontWeight: FontWeight.w700),
 
@@ -45,10 +45,9 @@ class MyThemeData{
           color: AppColors.blackColor,
           fontSize: 25,
           fontWeight: FontWeight.w400),
-    )
-
-
-
+    ),
+      splashColor: Colors.cyanAccent,
+    dialogBackgroundColor: Colors.deepOrange,
 
   );
 
@@ -57,17 +56,46 @@ class MyThemeData{
       appBarTheme: AppBarTheme(
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        //elevation: 0,
+        elevation: 0,
         shadowColor: Colors.transparent,
         iconTheme: IconThemeData(
-          size: 40,
+            size: 40,
+            color: Colors.white
         ),
         titleTextStyle:  GoogleFonts.elMessiri(
-            color: Color(0xff242424),
+            color: AppColors.yellowColor,
             fontSize: 30,
             fontWeight: FontWeight.w700),
 
+      ),
+      bottomNavigationBarTheme: BottomNavigationBarThemeData(
+        backgroundColor: AppColors.primary_dark,
+        showUnselectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        selectedItemColor: AppColors.yellowColor,
+        unselectedItemColor: Colors.white,
+      ),
+      dividerTheme: DividerThemeData(
+        thickness: 3,
+        color: AppColors.yellowColor,
+      ),
+      textTheme: TextTheme(
+        bodyLarge: GoogleFonts.elMessiri(
+            color: AppColors.yellowColor,
+            fontSize: 30,
+            fontWeight: FontWeight.w700),
+        bodyMedium: GoogleFonts.elMessiri(
+            color: AppColors.yellowColor,
+            fontSize: 25,
+            fontWeight: FontWeight.w600),
+        bodySmall: GoogleFonts.elMessiri(
+            color: AppColors.yellowColor,
+            fontSize: 25,
+            fontWeight: FontWeight.w400),
       )
+
+
+
 
   );
 
