@@ -17,12 +17,14 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-
+  bool _isDarkTheme = true;
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Image.asset("assets/images/bg3.png"),
+        Image.asset(_isDarkTheme?"assets/images/home_dark_background.png"
+        :"assets/images/bg3.png"
+        ),
         Scaffold(
           appBar: AppBar(
             title: Text("إسلامي"),

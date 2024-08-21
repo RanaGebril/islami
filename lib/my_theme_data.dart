@@ -19,7 +19,6 @@ class MyThemeData{
             color: AppColors.blackColor,
             fontSize: 30,
             fontWeight: FontWeight.w700),
-
       ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
      backgroundColor: AppColors.primary,
