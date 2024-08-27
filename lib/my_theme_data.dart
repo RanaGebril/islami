@@ -45,9 +45,6 @@ class MyThemeData{
           fontSize: 25,
           fontWeight: FontWeight.w400),
     ),
-      splashColor: Colors.cyanAccent,
-    dialogBackgroundColor: Colors.deepOrange,
-
   );
 
   static ThemeData dark_theme= ThemeData(
@@ -62,7 +59,7 @@ class MyThemeData{
             color: Colors.white
         ),
         titleTextStyle:  GoogleFonts.elMessiri(
-            color: AppColors.yellowColor,
+            color: AppColors.whiteColor,
             fontSize: 30,
             fontWeight: FontWeight.w700),
 
@@ -80,15 +77,15 @@ class MyThemeData{
       ),
       textTheme: TextTheme(
         bodyLarge: GoogleFonts.elMessiri(
-            color: AppColors.yellowColor,
+            color: AppColors.whiteColor,
             fontSize: 30,
             fontWeight: FontWeight.w700),
         bodyMedium: GoogleFonts.elMessiri(
-            color: AppColors.yellowColor,
+            color: AppColors.whiteColor,
             fontSize: 25,
             fontWeight: FontWeight.w600),
         bodySmall: GoogleFonts.elMessiri(
-            color: AppColors.yellowColor,
+            color: AppColors.whiteColor,
             fontSize: 25,
             fontWeight: FontWeight.w400),
       )
