@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/Sura_details_screen.dart';
 import 'package:islami/Sura_model.dart';
+import 'package:islami/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 import '../APP_colors.dart';
 
 class QuranTab extends StatefulWidget {
@@ -248,6 +250,7 @@ class _QuranTabState extends State<QuranTab> {
 
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Container(
@@ -322,7 +325,9 @@ class _QuranTabState extends State<QuranTab> {
           bottom: 0,
           height: 469,
           child: Container(
-            color: AppColors.primary,
+            color: provider_object.APPTheme==ThemeMode.dark
+                ?AppColors.yellowColor
+                :AppColors.primary,
             width: 3,
           ),
         )

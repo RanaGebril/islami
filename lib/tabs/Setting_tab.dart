@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/botttom_sheets/Theme_bottom_sheet.dart';
 import 'package:islami/botttom_sheets/language_bottom_sheet.dart';
+import 'package:islami/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class SettingTab extends StatelessWidget {
   const SettingTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(20),
       child: Column(
@@ -36,7 +39,9 @@ class SettingTab extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   border: Border.all(
-                    color: AppColors.yellowColor,
+                    color: provider_object.APPTheme == ThemeMode.dark
+                      ? AppColors.yellowColor
+                      : AppColors.primary,
                   )),
               child: Text(
                 "dark",
@@ -68,7 +73,9 @@ class SettingTab extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
                   border: Border.all(
-                    color: AppColors.yellowColor,
+                    color: provider_object.APPTheme == ThemeMode.dark
+                        ? AppColors.yellowColor
+                        : AppColors.primary,
                   )),
               child: Text(
                 "Arabic",

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/APP_colors.dart';
+import 'package:islami/provider/my_provider.dart';
 import 'package:islami/tabs/Ahadeth_tab.dart';
 import 'package:islami/tabs/Quran_tab.dart';
 import 'package:islami/tabs/Radio_tab.dart';
 import 'package:islami/tabs/Sebha_tab.dart';
 import 'package:islami/tabs/Setting_tab.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
@@ -17,17 +19,18 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
-  bool _isDarkTheme = true;
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return Stack(
       children: [
-        Image.asset(_isDarkTheme?"assets/images/home_dark_background.png"
+        Image.asset(provider_object.APPTheme == ThemeMode.dark?
+        "assets/images/home_dark_background.png"
         :"assets/images/bg3.png"
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text("إسلامي"),
+            title: Text("Islami"),
           ),
           bottomNavigationBar: BottomNavigationBar(
               currentIndex: selectedIndex,

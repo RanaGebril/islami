@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/APP_colors.dart';
+import 'package:islami/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Column(
@@ -28,9 +31,19 @@ class RadioTab extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ImageIcon(AssetImage("assets/images/previous.png"),color: AppColors.primary),
-                ImageIcon(AssetImage("assets/images/play.png"),color: AppColors.primary,size: 36),
-                ImageIcon(AssetImage("assets/images/next.png"),color: AppColors.primary)
+                ImageIcon(AssetImage("assets/images/previous.png"),
+                    color: provider_object.APPTheme == ThemeMode.dark
+                        ? AppColors.yellowColor
+                        : AppColors.primary,),
+                ImageIcon(AssetImage("assets/images/play.png"),
+                    color: provider_object.APPTheme == ThemeMode.dark
+                        ? AppColors.yellowColor
+                        : AppColors.primary
+                    ,size: 35),
+                ImageIcon(AssetImage("assets/images/next.png"),
+                    color: provider_object.APPTheme == ThemeMode.dark
+                        ? AppColors.yellowColor
+                        : AppColors.primary,)
               ],
             ),
           )

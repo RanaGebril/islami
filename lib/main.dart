@@ -4,9 +4,14 @@ import 'package:islami/Home.dart';
 import 'package:islami/Sura_details_screen.dart';
 import 'package:islami/hadeth_details_screen.dart';
 import 'package:islami/my_theme_data.dart';
+import 'package:islami/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(ChangeNotifierProvider
+    (
+    create: (context) => MyProvider(),
+      child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +20,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-      themeMode: ThemeMode.dark,
+      themeMode:provider_object.APPTheme,
       theme: MyThemeData.light_theme,
       darkTheme: MyThemeData.dark_theme,
       initialRoute: HomeScreen.routeName,

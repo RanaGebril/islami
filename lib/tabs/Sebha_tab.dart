@@ -3,6 +3,8 @@ import 'dart:math' as math;
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/APP_colors.dart';
+import 'package:islami/provider/my_provider.dart';
+import 'package:provider/provider.dart';
 class SebhaTab extends StatefulWidget {
   const SebhaTab({super.key});
 
@@ -17,18 +19,23 @@ class _SebhaTabState extends State<SebhaTab> {
   List<String>tasbeh=["سبحان الله","الحمد لله","لا إله إلا الله","الله أكبر"];
   @override
   Widget build(BuildContext context) {
+    var provider_object = Provider.of<MyProvider>(context);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Stack(
           alignment: Alignment.topCenter,
           children: [
-        Image.asset("assets/images/head of seb7a.png"),
+        Image.asset(provider_object.APPTheme==ThemeMode.dark
+            ?"assets/images/head of seb7a dark.png"
+            :"assets/images/head of seb7a.png"),
             Padding(
               padding: const EdgeInsets.only(top: 37),
               child: Transform.rotate(
                 angle: angle,
-                child: GestureDetector(child: Image.asset("assets/images/body of seb7a.png"),
+                child: GestureDetector(child: Image.asset(provider_object.APPTheme==ThemeMode.dark
+                    ?"assets/images/body of seb7a dark.png"
+                    :"assets/images/body of seb7a.png",height: 310,),
                 onTap: () {
                 onTapFunction();
 
@@ -52,7 +59,9 @@ class _SebhaTabState extends State<SebhaTab> {
             width: 70,
             height: 80,
             decoration: BoxDecoration(
-              color: Color(0xffB7935F),
+              color: provider_object.APPTheme==ThemeMode.dark
+                  ?AppColors.primary_dark
+                  :AppColors.primary,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Text(counter.toString(),
@@ -67,11 +76,17 @@ class _SebhaTabState extends State<SebhaTab> {
             width: 150,
             height: 80,
             decoration: BoxDecoration(
-              color: AppColors.primary,
+              color: provider_object.APPTheme==ThemeMode.dark
+                  ?AppColors.yellowColor
+                  :AppColors.primary,
               borderRadius: BorderRadius.circular(25),
             ),
             child: Text(tasbeh[index],
-        style: Theme.of(context).textTheme.bodyMedium
+        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+          color: provider_object.APPTheme==ThemeMode.dark
+              ?AppColors.blackColor
+              :AppColors.whiteColor
+        )
             ),
           ),
         ),
