@@ -44,8 +44,14 @@ class SettingTab extends StatelessWidget {
                       : AppColors.primary,
                   )),
               child: Text(
-                "dark",
-                style: Theme.of(context).textTheme.bodyMedium,
+                  provider_object.APPTheme == ThemeMode.dark
+                      ? "Dark"
+                      : "Light",
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                  color:  provider_object.APPTheme == ThemeMode.dark
+                      ? AppColors.yellowColor
+                      : AppColors.primary,
+                ),
               ),
             ),
           ),
