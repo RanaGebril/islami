@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/Sura_details_screen.dart';
 import 'package:islami/Sura_model.dart';
@@ -272,12 +273,12 @@ class _QuranTabState extends State<QuranTab> {
                 child: Row(
                   children: [
                     Text(
-                      "Verses Number",
+                      'varsesNumber'.tr(),
                         style: Theme.of(context).textTheme.bodyMedium
                     ),
                     Spacer(),
                     Text(
-                      "Sura Name",
+                      'suraName'.tr(),
                         style: Theme.of(context).textTheme.bodyMedium
                     )
                   ],

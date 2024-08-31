@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/botttom_sheets/Theme_bottom_sheet.dart';
@@ -17,7 +18,7 @@ class SettingTab extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            "Theme",
+            'theme'.tr(),
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           SizedBox(
@@ -45,8 +46,8 @@ class SettingTab extends StatelessWidget {
                   )),
               child: Text(
                   provider_object.APPTheme == ThemeMode.dark
-                      ? "Dark"
-                      : "Light",
+                      ? 'dark'.tr()
+                      : 'light'.tr(),
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color:  provider_object.APPTheme == ThemeMode.dark
                       ? AppColors.yellowColor
@@ -59,7 +60,7 @@ class SettingTab extends StatelessWidget {
             height: 30,
           ),
           Text(
-            "Language",
+            'language'.tr(),
             style: Theme.of(context).textTheme.bodyMedium,
           ),
           SizedBox(

@@ -1,0 +1,19 @@
+{
+  "appBarTittle" : "Islami",
+  "varsesNumber" : "Verses Number",
+  "suraName" : "Sura Name",
+  "tasbehNumber" : "Tasbeh Number",
+  "quranRadio" : "Holy Quran Radio",
+  "ahadeth" : "Ahadeth",
+  "theme" : "Theme",
+  "light" : "Light Mode",
+  "dark" : "Dark Mode",
+  "language" : "Language",
+  "arabic" : "Arabic",
+  "english" : "English",
+  "quranTab" : "Moshaf",
+  "sebhaTab" : "Sebha",
+  "radioTab" : "Radio",
+  "ahadethTab" : "Ahadeth",
+  "settingTab" : "Setting"
+}

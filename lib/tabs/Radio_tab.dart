@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/provider/my_provider.dart';
@@ -19,7 +20,7 @@ class RadioTab extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Text("إذاعة القرآن الكريم",
+          Text("quranRadio".tr(),
             style: Theme.of(context).textTheme.bodyMedium,
           ),
          SizedBox(

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -41,7 +42,7 @@ class _AhadethTabState extends State<AhadethTab> {
               padding:
               const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20),
               child: Text(
-                "Ahadeth",
+                'ahadeth'.tr(),
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
             ),

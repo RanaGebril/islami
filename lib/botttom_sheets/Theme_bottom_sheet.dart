@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/provider/my_provider.dart';
 import 'package:provider/provider.dart';
@@ -32,7 +33,7 @@ class ThemeBottomSheet extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Light",
+                Text('light'.tr(),
                     style: Theme.of(context)
                         .textTheme
                         .bodyMedium
@@ -59,7 +60,7 @@ class ThemeBottomSheet extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Dark",
+                Text('dark'.tr(),
                     style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                         color: provider_object.APPTheme == ThemeMode.dark
                             ? AppColors.yellowColor

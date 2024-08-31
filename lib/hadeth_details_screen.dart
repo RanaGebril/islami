@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/hadeth_model.dart';
@@ -20,7 +21,7 @@ class HadethDetailsScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Islami",
+            'appBarTittle'.tr(),
           ),
         ),
         body: Card(

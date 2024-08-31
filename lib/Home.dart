@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/provider/my_provider.dart';
 import 'package:islami/tabs/Ahadeth_tab.dart';
@@ -28,7 +29,9 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text("Islami"),
+            title: Text(
+                'appBarTittle'.tr()
+            ),
           ),
           bottomNavigationBar: BottomNavigationBar(
               currentIndex: selectedIndex,
@@ -40,18 +43,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 BottomNavigationBarItem(
                     icon:
                         ImageIcon(AssetImage("assets/images/moshaf_blue.png")),
-                    label: "Moshaf"),
+                    label: 'quranTab'.tr()),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/sebha.png")),
-                    label: "Sebha"),
+                    label: 'sebhaTab'.tr()),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/radio.png")),
-                    label: "Radio"),
+                    label: 'radioTab'.tr()),
                 BottomNavigationBarItem(
                     icon: ImageIcon(AssetImage("assets/images/Ahadeth.png")),
-                    label: "Ahadeth"),
+                    label: 'ahadethTab'.tr()),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.settings), label: "Setting"),
+                    icon: Icon(Icons.settings), label: 'settingTab'.tr()),
               ]),
           body: tabs[selectedIndex],
         )

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/APP_colors.dart';
 import 'package:islami/provider/my_provider.dart';
@@ -36,16 +37,16 @@ class _SebhaTabState extends State<SebhaTab> {
                         :"assets/images/body of seb7a.png",height: 310,),
                       onTap: () {
                         sebha_provider_object.onTapFunction();
-                        setState(() {
-
-                        });
+                        // setState(() {
+                        //
+                        // });
                       },
                     ),
                   ),
                 )
               ],
             ),
-            Text("عدد التسبيحات",
+            Text('tasbehNumber'.tr(),
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.w600,
               ),

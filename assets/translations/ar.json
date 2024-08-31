@@ -1,0 +1,19 @@
+{
+  "appBarTittle" : "إسلامي",
+  "varsesNumber" : "عدد الآيات",
+  "suraName" : "اسم السوره",
+  "tasbehNumber" : "عدد التسبيحات",
+  "quranRadio" : "إذاعة القرآن الكريم",
+  "ahadeth" : "الأحاديث",
+  "theme" : "المظهر",
+  "light" : "الوضع النهاري",
+  "dark" : "الوضع الليلي",
+  "language" : "اللغه",
+  "arabic" : "اللغه العربيه",
+  "english" : "اللغه الانجليزيه",
+  "quranTab" : "المصحف",
+  "sebhaTab" : "السبحه",
+  "radioTab" : "الإذاعه",
+  "ahadethTab" : "الأحاديث",
+  "settingTab" : "الإعدادات"
+}
