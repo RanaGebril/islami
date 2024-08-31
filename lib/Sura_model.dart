@@ -1,4 +1,3 @@
-
 class SuraModel{
   String name;
   int index;

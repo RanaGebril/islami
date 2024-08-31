@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/APP_colors.dart';
 
-
 class MyThemeData{
   static ThemeData light_theme= ThemeData(
       scaffoldBackgroundColor: Colors.transparent,

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:islami/APP_colors.dart';
 import 'package:islami/provider/my_provider.dart';
 import 'package:islami/tabs/Ahadeth_tab.dart';
 import 'package:islami/tabs/Quran_tab.dart';

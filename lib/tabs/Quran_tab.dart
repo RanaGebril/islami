@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/Sura_details_screen.dart';
 import 'package:islami/Sura_model.dart';
 import 'package:islami/provider/my_provider.dart';
