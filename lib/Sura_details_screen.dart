@@ -34,7 +34,7 @@ class SuraDetailsScreen extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               title: Text(
-                "إسلامي",
+                "Islami",
               ),
             ),
             body: Card(
