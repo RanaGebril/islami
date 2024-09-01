@@ -20,7 +20,7 @@ void main() async {
     //fallbackLocale: Locale('en', 'US'),
     child: ChangeNotifierProvider
       (
-      create: (context) => MyProvider(),
+      create: (context) => MyProvider()..getTheme(),
         child: MyApp()),
   ));
 }

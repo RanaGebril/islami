@@ -37,9 +37,9 @@ class _SebhaTabState extends State<SebhaTab> {
                         :"assets/images/body of seb7a.png",height: 310,),
                       onTap: () {
                         sebha_provider_object.onTapFunction();
-                        // setState(() {
-                        //
-                        // });
+                         setState(() {
+
+                         });
                       },
                     ),
                   ),

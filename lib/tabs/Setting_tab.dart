@@ -85,7 +85,9 @@ class SettingTab extends StatelessWidget {
                         : AppColors.primary,
                   )),
               child: Text(
-                "Arabic",
+                  context.locale == Locale("ar")?
+                      "اللغه العربيه"
+                  : "English",
                 style: Theme.of(context).textTheme.bodyMedium?.copyWith(
                   color:  provider_object.APPTheme == ThemeMode.dark
                       ? AppColors.yellowColor

@@ -323,7 +323,7 @@ class _QuranTabState extends State<QuranTab> {
         Positioned(
           left: 205,
           bottom: 0,
-          height: 469,
+          height: 482,
           child: Container(
             color: provider_object.APPTheme==ThemeMode.dark
                 ?AppColors.yellowColor
