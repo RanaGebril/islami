@@ -75,6 +75,7 @@ class SettingTab extends StatelessWidget {
                     return LanguageBottomSheet();
                   },);
             },
+
             child: Container(
               padding: EdgeInsets.all(12),
               decoration: BoxDecoration(

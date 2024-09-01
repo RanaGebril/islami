@@ -10,6 +10,7 @@ class MyProvider extends ChangeNotifier {
     final bool? darkMode = prefs.getBool('isDark'); //
     if(darkMode != null){
       if(darkMode){
+
         APPTheme = ThemeMode.dark;
       }
       else{

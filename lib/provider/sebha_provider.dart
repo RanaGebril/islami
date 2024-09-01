@@ -25,7 +25,8 @@ class SebhaProvider extends ChangeNotifier {
       index = 0;
     }
 
-    saveCounter();  // Save the updated counter value
+
+    saveCounter();  //  Save the updated counter value
     notifyListeners();
   }
 

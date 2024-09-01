@@ -320,6 +320,7 @@ class _QuranTabState extends State<QuranTab> {
             ],
           ),
         ),
+
         Positioned(
           left: 205,
           bottom: 0,
