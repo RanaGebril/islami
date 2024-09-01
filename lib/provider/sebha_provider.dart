@@ -24,8 +24,6 @@ class SebhaProvider extends ChangeNotifier {
     if (index == tasbeh.length) {
       index = 0;
     }
-
-
     saveCounter();  //  Save the updated counter value
     notifyListeners();
   }
