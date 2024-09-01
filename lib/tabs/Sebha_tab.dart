@@ -4,14 +4,9 @@ import 'package:islami/APP_colors.dart';
 import 'package:islami/provider/my_provider.dart';
 import 'package:islami/provider/sebha_provider.dart';
 import 'package:provider/provider.dart';
-class SebhaTab extends StatefulWidget {
+class SebhaTab extends StatelessWidget {
   const SebhaTab({super.key});
 
-  @override
-  State<SebhaTab> createState() => _SebhaTabState();
-}
-
-class _SebhaTabState extends State<SebhaTab> {
   @override
   Widget build(BuildContext context) {
     var provider_object = Provider.of<MyProvider>(context);
@@ -37,9 +32,6 @@ class _SebhaTabState extends State<SebhaTab> {
                         :"assets/images/body of seb7a.png",height: 310,),
                       onTap: () {
                         sebha_provider_object.onTapFunction();
-                         setState(() {
-
-                         });
                       },
                     ),
                   ),
