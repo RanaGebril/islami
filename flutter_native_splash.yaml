@@ -11,7 +11,6 @@ flutter_native_splash:
 
 
   color_dark: "#141A2E"
-#  background_image_dark: "assets/images/dark_bg.png"
   image_dark: assets/images/dark logo.png
   branding_dark: assets/images/route_yellow.png
 
